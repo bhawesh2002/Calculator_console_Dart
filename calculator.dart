@@ -1,5 +1,7 @@
 import 'dart:io';
 
-void main(){
-
+void main() {
+  print("========CALCULATOR========");
+  String? number = stdin.readLineSync();
+  print(number);
 }
