@@ -2,7 +2,9 @@ import 'dart:io';
 
 void main() {
   print("========CALCULATOR========");
-  String? number = stdin.readLineSync();
-  
-  print(number?.contains(new RegExp(r'^[0-9]+$')));
+  var number = stdin.readLineSync();
+  var check = number?.contains(new RegExp('^[0-9]+'));
+  if (check == false){
+    print("ERROR:Only Numbers Expected");
+  };
 }
