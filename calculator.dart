@@ -2,10 +2,10 @@ import 'dart:io';
 
 void main() {
   print("========CALCULATOR========");
-  var number = stdin.readLineSync();
-  var check = number?.contains(new RegExp('^[0-9]+'));
+  var input = stdin.readLineSync();
+  var check = input?.contains(new RegExp(r'^[0-9\-=/*\+]+$'));
   if (check == false){
-    print("ERROR:Only Numbers Expected");
+    print("ERROR:Only inputs Expected");
     exit(0);
   };
 }
