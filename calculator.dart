@@ -8,4 +8,5 @@ void main() {
     print("ERROR:Only inputs Expected");
     exit(0);
   };
+  var number = input;
 }
