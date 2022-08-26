@@ -34,5 +34,6 @@ void main() {
     }
     i++;
   });
+  numbers.add(input?.substring(op, i));
   print(numbers);
 }
