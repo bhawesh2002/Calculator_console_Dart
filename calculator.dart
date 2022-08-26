@@ -21,7 +21,7 @@ void main() {
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
-      print('Adding');
+      number = input?.substring(0, i);
     } else if (digit == '-') {
       print('Subtractting');
     } else if (digit == '*') {
@@ -31,4 +31,5 @@ void main() {
     }
     i++;
   });
+  print(number);
 }
