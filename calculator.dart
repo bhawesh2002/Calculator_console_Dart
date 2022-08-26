@@ -35,12 +35,12 @@ void main() {
     i++;
   });
   numbers.add(input?.substring(op_index, i));
-  for (var i = 0; i < numbers.length; i++) {
+  /*for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
   num add = 0;
   for (var i = 0; i < numbers.length; i++) {
     add += numbers[i];
   }
-  print(add);
+  print(add);*/
 }
