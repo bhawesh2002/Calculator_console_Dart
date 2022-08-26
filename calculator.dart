@@ -13,7 +13,10 @@ void main() {
     print("ERROR :NO OPERATION SPECIFIED");
     exit(0);
   }
-  var endCheck = input?.endsWith('+');
+  var endCheck = input?.endsWith('+') == true ||
+      input?.endsWith('-') == true ||
+      input?.endsWith('*') == true ||
+      input?.endsWith('/') == true;
   if (endCheck == true) {
     input = input?.substring(0, input.length - 1);
   }
