@@ -38,4 +38,9 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
+  num add = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    add += numbers[i];
+  }
+  print(add);
 }
