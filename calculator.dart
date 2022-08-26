@@ -19,12 +19,12 @@ void main() {
     input = input?.substring(0, input.length - 1);
   }
   int i = 0;
-  int op = 0;
+  int op_index = 0;
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
-      numbers.add(input?.substring(op, i));
-      op = i + 1;
+      numbers.add(input?.substring(op_index, i));
+      op_index = i + 1;
     } else if (digit == '-') {
       print('Subtractting');
     } else if (digit == '*') {
@@ -34,7 +34,7 @@ void main() {
     }
     i++;
   });
-  numbers.add(input?.substring(op, i));
+  numbers.add(input?.substring(op_index, i));
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
