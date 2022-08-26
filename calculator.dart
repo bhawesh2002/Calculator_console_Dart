@@ -26,15 +26,19 @@ void main() {
       numbers.add(input?.substring(op_index, i));
       op_index = i + 1;
     } else if (digit == '-') {
-      print('Subtractting');
+      numbers.add(input?.substring(op_index, i));
+      op_index = i + 1;
     } else if (digit == '*') {
-      print('Multiplying');
+      numbers.add(input?.substring(op_index, i));
+      op_index = i + 1;
     } else if (digit == '/') {
-      print('Dividing');
+      numbers.add(input?.substring(op_index, i));
+      op_index = i + 1;
     }
     i++;
   });
   numbers.add(input?.substring(op_index, i));
+  print(numbers);
   /*for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
