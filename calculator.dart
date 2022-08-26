@@ -8,7 +8,7 @@ void main() {
     print("ERROR:Only numerical inputs are Expected");
     exit(0);
   }
-  var number = 0;
+  var number;
   var hasOperation = input?.contains(new RegExp(r'^[0-9]+$'));
   if (hasOperation == true) {
     print("ERROR :NO OPERATION SPECIFIED");
