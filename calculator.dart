@@ -13,7 +13,10 @@ void main() {
   if (hasOperation == true) {
     print("ERROR :NO OPERATION SPECIFIED");
   }
-
+  var endCheck = input?.endsWith('+');
+  if (endCheck == true) {
+    input = input?.substring(0, input.length - 1);
+  }
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
