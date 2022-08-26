@@ -17,6 +17,7 @@ void main() {
   if (endCheck == true) {
     input = input?.substring(0, input.length - 1);
   }
+  int i = 0;
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
@@ -28,5 +29,6 @@ void main() {
     } else if (digit == '/') {
       print('Dividing');
     }
+    i++;
   });
 }
