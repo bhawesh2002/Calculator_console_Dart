@@ -9,6 +9,11 @@ void main() {
     exit(0);
   }
   var number = 0;
+  var hasOperation = input?.contains(new RegExp(r'^[0-9]+$'));
+  if (hasOperation == true) {
+    print("ERROR :NO OPERATION SPECIFIED");
+  }
+
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
@@ -19,8 +24,6 @@ void main() {
       print('Multiplying');
     } else if (digit == '/') {
       print('Dividing');
-    } else {
-      print("ERROR :NO OPERATION SPECIFIED");
     }
   });
 }
