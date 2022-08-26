@@ -35,5 +35,7 @@ void main() {
     i++;
   });
   numbers.add(input?.substring(op, i));
-  print(numbers);
+  for (var i = 0; i < numbers.length; i++) {
+    numbers[i] = int.parse(numbers[i]);
+  }
 }
