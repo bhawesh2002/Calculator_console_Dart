@@ -12,6 +12,7 @@ void main() {
   var hasOperation = input?.contains(new RegExp(r'^[0-9]+$'));
   if (hasOperation == true) {
     print("ERROR :NO OPERATION SPECIFIED");
+    exit(0);
   }
   var endCheck = input?.endsWith('+');
   if (endCheck == true) {
@@ -33,6 +34,5 @@ void main() {
     }
     i++;
   });
-  numbers.add(input?.substring(op,i));
   print(numbers);
 }
