@@ -8,7 +8,6 @@ void main() {
     print("ERROR:Only numerical inputs are Expected");
     exit(0);
   }
-  var numbers = new List.empty(growable: true);
   var hasOperation = input?.contains(new RegExp(r'^[0-9]+$'));
   if (hasOperation == true) {
     print("ERROR :NO OPERATION SPECIFIED");
@@ -18,6 +17,7 @@ void main() {
   if (endCheck == true) {
     input = input?.substring(0, input.length - 1);
   }
+  var numbers = new List.empty(growable: true);
   int i = 0;
   int op_index = 0;
   input?.runes.forEach((element) {
