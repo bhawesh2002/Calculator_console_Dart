@@ -13,12 +13,14 @@ void main() {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
       print('Adding');
-    }else if(digit == '-'){
+    } else if (digit == '-') {
       print('Subtractting');
-    }else if(digit == '*'){
+    } else if (digit == '*') {
       print('Multiplying');
-    }else if(digit == '/'){
+    } else if (digit == '/') {
       print('Dividing');
+    } else {
+      print("ERROR :NO OPERATION SPECIFIED");
     }
   });
 }
