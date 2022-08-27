@@ -13,13 +13,6 @@ void main() {
     print("ERROR :NO OPERATION SPECIFIED");
     exit(0);
   }
-  var endCheck = input?.endsWith('+') == true ||
-      input?.endsWith('-') == true ||
-      input?.endsWith('*') == true ||
-      input?.endsWith('/') == true;
-  if (endCheck == true) {
-    input = input?.substring(0, input.length - 1);
-  }
   var numbers = new List.empty(growable: true);
   int i = 0;
   int op_index = 0;
@@ -27,19 +20,19 @@ void main() {
   input?.runes.forEach((element) {
     var digit = new String.fromCharCode(element);
     if (digit == '+') {
-      numbers.add(input?.substring(op_index, i));
+      numbers.add(input.substring(op_index, i));
       op_index = i + 1;
       operations.add('+');
     } else if (digit == '-') {
-      numbers.add(input?.substring(op_index, i));
+      numbers.add(input.substring(op_index, i));
       op_index = i + 1;
       operations.add('-');
     } else if (digit == '*') {
-      numbers.add(input?.substring(op_index, i));
+      numbers.add(input.substring(op_index, i));
       op_index = i + 1;
       operations.add('*');
     } else if (digit == '/') {
-      numbers.add(input?.substring(op_index, i));
+      numbers.add(input.substring(op_index, i));
       op_index = i + 1;
       operations.add('/');
     }
@@ -51,6 +44,10 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
+  bool div_check = numbers.contains('/');
+  bool mul_check = numbers.contains('*');
+  bool add_check = numbers.contains('+');
+  bool sub_check = numbers.contains('-');
   num evaluated = 0;
   print(evaluated);
 }
