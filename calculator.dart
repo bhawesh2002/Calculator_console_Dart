@@ -57,8 +57,5 @@ void main() {
         print(index);
       }
     }
-    for (var i = 0; i < operations.length; i++) {
-      
-    }
   }
 }
