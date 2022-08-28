@@ -44,10 +44,21 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
-  bool div_check = numbers.contains('/');
-  bool mul_check = numbers.contains('*');
-  bool add_check = numbers.contains('+');
-  bool sub_check = numbers.contains('-');
-  num evaluated = 0;
-  print(evaluated);
+  bool div_check = operations.contains('/');
+  bool mul_check = operations.contains('*');
+  bool add_check = operations.contains('+');
+  bool sub_check = operations.contains('-');
+  var div;
+  if (div_check == true) {
+    var index;
+    for (var i = 0; i < operations.length; i++) {
+      if (operations[i] == '/') {
+        index = i;
+        print(index);
+      }
+    }
+    for (var i = 0; i < operations.length; i++) {
+      
+    }
+  }
 }
