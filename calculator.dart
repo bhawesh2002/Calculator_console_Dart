@@ -39,8 +39,6 @@ void main() {
     i++;
   });
   numbers.add(input?.substring(op_index, i));
-  print(numbers);
-  print(operations);
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
@@ -49,13 +47,17 @@ void main() {
   bool add_check = operations.contains('+');
   bool sub_check = operations.contains('-');
   var div;
+  print(numbers);
   if (div_check == true) {
-    var index;
+    var div_index = 0;
     for (var i = 0; i < operations.length; i++) {
       if (operations[i] == '/') {
-        index = i;
-        print(index);
+        div_index = i;
+        div = numbers[div_index] / numbers[div_index + 1];
+        numbers.removeAt(div_index);
+        numbers[div_index + 1] = div;
       }
     }
   }
+  print(numbers);
 }
