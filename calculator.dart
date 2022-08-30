@@ -42,7 +42,8 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
-  double div;
+  var div;
+  var mul;
   print(numbers);
   print(operations);
   while (true) {
@@ -52,6 +53,17 @@ void main() {
       numbers.removeAt(operations.indexOf('/'));
       numbers[operations.indexOf('/')] = div;
       operations.removeAt(operations.indexOf('/'));
+    } else {
+      break;
+    }
+  }
+  while (true) {
+    if (operations.contains('*') == true) {
+      mul = numbers[operations.indexOf('*')] *
+          numbers[operations.indexOf('*') + 1];
+      numbers.removeAt(operations.indexOf('*'));
+      numbers[operations.indexOf('*')] = mul;
+      operations.removeAt(operations.indexOf('*'));
     } else {
       break;
     }
