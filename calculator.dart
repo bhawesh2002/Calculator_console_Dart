@@ -47,18 +47,8 @@ void main() {
   bool add_check = operations.contains('+');
   bool sub_check = operations.contains('-');
   print(numbers);
-  if (div_check == true) {}
-  /*var mul;
-  if (mul_check == true) {
-    var mul_index = 0;
-    for (var i = 0; i < operations.length; i++) {
-      if (operations[i] == '*') {
-        mul_index = i;
-        mul = numbers[mul_index] / numbers[mul_index + 1];
-        numbers.removeAt(mul_index);
-        numbers[mul_index + 1] = mul;
-      }
-    }
-  }*/
-  print(numbers);
+  print(operations);
+  if (div_check == true) {
+    print(operations.indexOf('/'));
+  }
 }
