@@ -42,14 +42,20 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
+  double div;
   print(numbers);
   print(operations);
   while (true) {
     if (operations.contains('/') == true) {
+      div = numbers[operations.indexOf('/')] /
+          numbers[operations.indexOf('/') + 1];
+      numbers.removeAt(operations.indexOf('/'));
+      numbers[operations.indexOf('/')] = div;
       operations.removeAt(operations.indexOf('/'));
     } else {
       break;
     }
   }
+  print(numbers);
   print(operations);
 }
