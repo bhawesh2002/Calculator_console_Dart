@@ -54,7 +54,6 @@ void main() {
       if (operations[i] == '/') {
         div_index = i;
         div = numbers[div_index] / numbers[div_index + 1];
-        numbers.removeAt(i);
         numbers[div_index + 1] = div;
       }
     }
