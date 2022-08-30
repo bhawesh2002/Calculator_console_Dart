@@ -42,14 +42,14 @@ void main() {
   for (var i = 0; i < numbers.length; i++) {
     numbers[i] = int.parse(numbers[i]);
   }
-  bool div_check = operations.contains('/');
-  bool mul_check = operations.contains('*');
-  bool add_check = operations.contains('+');
-  bool sub_check = operations.contains('-');
   print(numbers);
   print(operations);
-  if (div_check == true) {
-    numbers.removeAt(operations.indexOf('/'));
+  while (true) {
+    if (operations.contains('/') == true) {
+      operations.removeAt(operations.indexOf('/'));
+    } else {
+      break;
+    }
   }
-  print(numbers);
+  print(operations);
 }
