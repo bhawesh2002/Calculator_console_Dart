@@ -44,6 +44,7 @@ void main() {
   }
   var div;
   var mul;
+  var sum;
   print(numbers);
   print(operations);
   while (true) {
@@ -68,6 +69,18 @@ void main() {
       break;
     }
   }
+  while (true) {
+    if (operations.contains('+') == true) {
+      sum = numbers[operations.indexOf('+')] +
+          numbers[operations.indexOf('+') + 1];
+      numbers.removeAt(operations.indexOf('+'));
+      numbers[operations.indexOf('+')] = sum;
+      operations.removeAt(operations.indexOf('+'));
+    } else {
+      break;
+    }
+  }
+
   print(numbers);
   print(operations);
 }
