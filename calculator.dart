@@ -49,6 +49,7 @@ void main() {
   print(numbers);
   print(operations);
   if (div_check == true) {
-    print(operations.indexOf('/'));
+    numbers.removeAt(operations.indexOf('/'));
   }
+  print(numbers);
 }
