@@ -49,33 +49,33 @@ void main() {
   print(operations);
   while (true) {
     if (operations.contains('/') == true) {
-      div = numbers[operations.indexOf('/')] /
-          numbers[operations.indexOf('/') + 1];
-      numbers.removeAt(operations.indexOf('/'));
-      numbers[operations.indexOf('/')] = div;
-      operations.removeAt(operations.indexOf('/'));
+      int indexVal = operations.indexOf('/');
+      div = numbers[indexVal] / numbers[indexVal + 1];
+      numbers.removeAt(indexVal);
+      numbers[indexVal] = div;
+      operations.removeAt(indexVal);
     } else {
       break;
     }
   }
   while (true) {
     if (operations.contains('*') == true) {
-      mul = numbers[operations.indexOf('*')] *
-          numbers[operations.indexOf('*') + 1];
-      numbers.removeAt(operations.indexOf('*'));
-      numbers[operations.indexOf('*')] = mul;
-      operations.removeAt(operations.indexOf('*'));
+      int indexVal = operations.indexOf('*');
+      mul = numbers[indexVal] * numbers[indexVal + 1];
+      numbers.removeAt(indexVal);
+      numbers[indexVal] = mul;
+      operations.removeAt(indexVal);
     } else {
       break;
     }
   }
   while (true) {
     if (operations.contains('+') == true) {
-      sum = numbers[operations.indexOf('+')] +
-          numbers[operations.indexOf('+') + 1];
-      numbers.removeAt(operations.indexOf('+'));
-      numbers[operations.indexOf('+')] = sum;
-      operations.removeAt(operations.indexOf('+'));
+      int indexVal = operations.indexOf('+');
+      sum = numbers[indexVal] + numbers[indexVal + 1];
+      numbers.removeAt(indexVal);
+      numbers[indexVal] = sum;
+      operations.removeAt(indexVal);
     } else {
       break;
     }
