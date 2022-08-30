@@ -59,14 +59,15 @@ void main() {
       }
     }
   }
+  var mul;
   if (mul_check == true) {
     var mul_index = 0;
     for (var i = 0; i < operations.length; i++) {
       if (operations[i] == '*') {
         mul_index = i;
-        div = numbers[mul_index] / numbers[mul_index + 1];
+        mul = numbers[mul_index] / numbers[mul_index + 1];
         numbers.removeAt(mul_index);
-        numbers[mul_index + 1] = div;
+        numbers[mul_index + 1] = mul;
       }
     }
   }
