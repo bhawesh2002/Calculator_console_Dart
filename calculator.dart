@@ -54,12 +54,12 @@ void main() {
       if (operations[i] == '/') {
         div_index = i;
         div = numbers[div_index] / numbers[div_index + 1];
-        numbers.removeAt(div_index);
+        numbers.removeAt(i);
         numbers[div_index + 1] = div;
       }
     }
   }
-  var mul;
+  /*var mul;
   if (mul_check == true) {
     var mul_index = 0;
     for (var i = 0; i < operations.length; i++) {
@@ -70,6 +70,6 @@ void main() {
         numbers[mul_index + 1] = mul;
       }
     }
-  }
+  }*/
   print(numbers);
 }
