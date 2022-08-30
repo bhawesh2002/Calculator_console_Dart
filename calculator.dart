@@ -46,18 +46,8 @@ void main() {
   bool mul_check = operations.contains('*');
   bool add_check = operations.contains('+');
   bool sub_check = operations.contains('-');
-  var div;
   print(numbers);
-  if (div_check == true) {
-    var div_index = 0;
-    for (var i = 0; i < operations.length; i++) {
-      if (operations[i] == '/') {
-        div_index = i;
-        div = numbers[div_index] / numbers[div_index + 1];
-        numbers[div_index + 1] = div;
-      }
-    }
-  }
+  if (div_check == true) {}
   /*var mul;
   if (mul_check == true) {
     var mul_index = 0;
