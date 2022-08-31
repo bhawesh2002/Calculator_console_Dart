@@ -67,6 +67,8 @@ void main() {
   var sub; //create a variable to store the result of the subtraction
   //print(numbers); //print the list of numbers
   //print(operations); //print the list of operators
+  print(numbers);
+  print(operations);
   while (true) {
     if (operations.contains('/') == true) {
       //if the list of operators contains division
