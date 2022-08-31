@@ -65,8 +65,8 @@ void main() {
   var mul; //create a variable to store the result of the multiplication
   var sum; //create a variable to store the result of the sum
   var sub; //create a variable to store the result of the subtraction
-  print(numbers); //print the list of numbers
-  print(operations); //print the list of operators
+  //print(numbers); //print the list of numbers
+  //print(operations); //print the list of operators
   while (true) {
     if (operations.contains('/') == true) {
       //if the list of operators contains division
@@ -81,6 +81,8 @@ void main() {
           div; //replace the number at the index of the division operator with the result of the division
       operations.removeAt(
           indexVal); //remove the operator at the index of the division operator
+      print(numbers);
+      print(operations);
     } else {
       break; //if the list of operators does not contain division break the loop
     }
@@ -99,6 +101,8 @@ void main() {
           mul; //replace the number at the index of the multiplication operator with the result of the multiplication
       operations.removeAt(
           indexVal); //remove the operator at the index of the multiplication operator
+      print(numbers);
+      print(operations);
     } else {
       break; //if the list of operators does not contain multiplication break the loop
     }
@@ -117,6 +121,8 @@ void main() {
           sum; //replace the number at the index of the addition operator with the result of the addition
       operations.removeAt(
           indexVal); //remove the operator at the index of the addition operator
+      print(numbers);
+      print(operations);
     } else {
       break; //if the list of operators does not contain addition break the loop
     }
@@ -135,10 +141,11 @@ void main() {
           sub; //replace the number at the index of the subtraction operator with the result of the subtraction
       operations.removeAt(
           indexVal); //remove the operator at the index of the subtraction operator
+      print(numbers);
+      print(operations);
     } else {
       break; //if the list of operators does not contain subtraction break the loop
     }
   }
   print(numbers); //print the list of numbers
-  print(operations); //print the list of operators
 }
