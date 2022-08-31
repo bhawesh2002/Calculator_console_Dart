@@ -80,7 +80,17 @@ void main() {
       break;
     }
   }
-
+  while (true) {
+    if (operations.contains('-') == true) {
+      int indexVal = operations.indexOf('-');
+      mul = numbers[indexVal] - numbers[indexVal + 1];
+      numbers.removeAt(indexVal);
+      numbers[indexVal] = mul;
+      operations.removeAt(indexVal);
+    } else {
+      break;
+    }
+  }
   print(numbers);
   print(operations);
 }
