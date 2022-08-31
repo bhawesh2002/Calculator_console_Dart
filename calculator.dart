@@ -64,6 +64,7 @@ void main() {
   var div; //create a variable to store the result of the division
   var mul; //create a variable to store the result of the multiplication
   var sum; //create a variable to store the result of the sum
+  var sub; //create a variable to store the result of the subtraction
   print(numbers); //print the list of numbers
   print(operations); //print the list of operators
   while (true) {
@@ -125,13 +126,13 @@ void main() {
       //if the list of operators contains subtraction
       int indexVal =
           operations.indexOf('-'); //get the index of the subtraction operator
-      mul = numbers[indexVal] -
+      sub = numbers[indexVal] -
           numbers[indexVal +
               1]; //subtract the numbers at the index of the subtraction operator
       numbers.removeAt(
           indexVal); //remove the numbers at the index of the subtraction operator
       numbers[indexVal] =
-          mul; //replace the number at the index of the subtraction operator with the result of the subtraction
+          sub; //replace the number at the index of the subtraction operator with the result of the subtraction
       operations.removeAt(
           indexVal); //remove the operator at the index of the subtraction operator
     } else {
