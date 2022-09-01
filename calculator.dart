@@ -149,5 +149,6 @@ void main() {
       break; //if the list of operators does not contain subtraction break the loop
     }
   }
-  print(numbers); //print the list of numbers
+  print('========RESULT========'); //print the result
+  print(numbers[0]); //print the list of numbers
 }
