@@ -110,6 +110,7 @@ void main() {
     }
   }
   while (true) {
+    //run a infinite loop
     if (operations.contains('+') == true) {
       //if the list of operators contains addition
       int indexVal =
