@@ -151,5 +151,5 @@ void main() {
     }
   }
   print('========RESULT========'); //print the result
-  print(numbers[0]); //print the list of numbers
+  print(numbers[0]); //print the numeric result
 }
